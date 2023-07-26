@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/windows/nanoserver:ltsc2022 
+FROM mcr.microsoft.com/windows/windowsservercore:ltsc2022 
 
 LABEL maintainer "Perry Skountrianos"
 

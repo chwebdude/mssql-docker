@@ -20,12 +20,12 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'Azure Container Registy'
+        containerRegistry: 'DockerHub'
         command: 'login'
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'Azure Container Registy'
+        containerRegistry: 'DockerHub'
         repository: 'mssql-2019-windows-2022'
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/windows/mssql-server-windows-developer/dockerfile'
