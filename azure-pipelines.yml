@@ -8,8 +8,6 @@ trigger:
 resources:
 - repo: self
 
-variables:
-  tag: '$(Build.BuildId)'
 
 stages:
 - stage: Build
@@ -23,7 +21,8 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/windows/mssql-server-windows-developer/dockerfile'
-        tags: |
-          $(tag)
+        containerRegistry: 'Azure Container Registy'
+        repository: 'mssql-2019-windows-2022'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+        tags: 'latest'
