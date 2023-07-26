@@ -4,7 +4,7 @@
 
 # Download the SQL Developer from the following location  https://go.microsoft.com/fwlink/?linkid=866662 and extract the .box and .exe files using the option: "Download Media"
 
-FROM mcr.microsoft.com/windows/windowsservercore:ltsc2022
+FROM mcr.microsoft.com/windows/servercore:ltsc2022
 
 ENV sa_password="_" \
     attach_dbs="[]" \
