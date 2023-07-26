@@ -28,5 +28,5 @@ stages:
         containerRegistry: 'Azure Container Registy'
         repository: 'mssql-2019-windows-2022'
         command: 'buildAndPush'
-        Dockerfile: '$(Build.SourcesDirectory)/windows/mssql-server-windows-developer/dockerfile'
+        Dockerfile: '$(Build.SourcesDirectory)/windows/mssql-server-windows-developer/dockerfile_1'
         tags: 'nano'
